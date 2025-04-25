@@ -1,30 +1,21 @@
 public class Penilaian25 {
     Mahasiswa25 mahasiswa25;
-    MataKuliah25 mataKuliah25;
-    double nilaiTugas25;
-    double nilaiUTS25;
-    double nilaiUAS25;
-    double nilaiAkhir25;
+    MataKuliah25 matakuliah25;
+    double tugas25, uts25, uas25, nilaiAkhir25;
 
-    public Penilaian25(Mahasiswa25 mahasiswa25, MataKuliah25 mataKuliah25, double tugas25, double uts25, double uas25) {
+    public Penilaian25(Mahasiswa25 mahasiswa25, MataKuliah25 matakuliah25, double tugas25, double uts25, double uas25) {
         this.mahasiswa25 = mahasiswa25;
-        this.mataKuliah25 = mataKuliah25;
-        this.nilaiTugas25 = tugas25;
-        this.nilaiUTS25 = uts25;
-        this.nilaiUAS25 = uas25;
-        hitungNilaiAkhir25();
-    }
-
-    public void hitungNilaiAkhir25() {
-        this.nilaiAkhir25 = (nilaiTugas25 * 0.3) + (nilaiUTS25 * 0.3) + (nilaiUAS25 * 0.4);
+        this.matakuliah25 = matakuliah25;
+        this.tugas25 = tugas25;
+        this.uts25 = uts25;
+        this.uas25 = uas25;
+        this.nilaiAkhir25 = (tugas25 * 0.3) + (uts25 * 0.3) + (uas25 * 0.4);
     }
 
     public void tampilPenilaian25() {
-        mahasiswa25.tampilMahasiswa25();
-        mataKuliah25.tampilMatakuliah25();
-        System.out.println("Nilai Tugas : " + nilaiTugas25);
-        System.out.println("Nilai UTS   : " + nilaiUTS25);
-        System.out.println("Nilai UAS   : " + nilaiUAS25);
-        System.out.println("Nilai Akhir : " + nilaiAkhir25);
+        System.out.println("Mahasiswa: " + mahasiswa25.nama25);
+        System.out.println("NIM: " + mahasiswa25.nim25);
+        System.out.println("Mata Kuliah: " + matakuliah25.namaMK25);
+        System.out.println("Tugas: " + tugas25 + ", UTS: " + uts25 + ", UAS: " + uas25 + ", Nilai Akhir: " + nilaiAkhir25);
     }
 }
