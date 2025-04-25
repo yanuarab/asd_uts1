@@ -63,6 +63,7 @@ public class Main25 {
             daftarPenilaian25[jumlahData25] = p25;
 
             jumlahData25++;
+            
         }
     }
 
